@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.armelle {
+    background: linear-gradient(rgba(20, 25, 43, 0.5), rgba(20, 25, 43, 0.5));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-image: url("ouaga.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #14192b;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+  
+.site {
+    background-color: #14192b;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    border-radius: 10px;
+}
+.travel-logo {
+    font-size: 32px;
+    color: #fca311;
+}
+
+.site h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.sous-titre {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #fca311;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.reserver {
+    background-color: #fca311;
+    color: #14192b;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px; 
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(252, 163, 17, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reserver:hover {
+    background-color: #ffffff;
+    color: #14192b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+
+.disposition {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.menu {
+    width: 75px; 
+    background-color: #14192b;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    z-index: 95;
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.menu:hover {
+    width: 260px;
+}
+
+.liens {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 16px 26px;
+    gap: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.elements i {
+    font-size: 22px;
+    min-width: 25px;
+    text-align: center;
+}
+
+.elements:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.elements.active {
+    background-color: rgba(252, 163, 17, 0.15);
+    color: #fca311;
+    border-left: 4px solid #fca311;
+}
+
+
+.elements span {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+
+.menu:hover .elements span {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+
+.contenu {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+
+.galerie {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1150px;
+    padding: 45px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25),
+                inset 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.galerie h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.decor {
+    width: 60px;
+    height: 4px;
+    background-color: #fca311;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(252, 163, 17, 0.4);
+}
+
+.intro {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+.carte {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.carte:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(20, 25, 43, 0.2);
+    border-color: #fca311;
+}
+
+
+.enveloppe {
+    width: 100%;
+    height: 220px;
+    background-color: #14192b;
+    overflow: hidden;
+}
+
+.enveloppe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+.carte:hover .enveloppe img {
+    transform: scale(1.08);
+}
+
+
+.info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #ffffff;
+}
+
+.info h3 {
+    font-size: 17px;
+    color: #14192b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+.pied {
+    background-color: #14192b;
+    color: #64748b;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 13px;
+    border-top: 1px solid #242c42;
+    width: 100%;
+    margin-top: auto;
+    z-index: 100;
+}
+
+.pied p {
+    color: #475569;
+}
+
+
+@media (max-width: 768px) {
+    .site {
+        padding: 15px 20px;
+    }
+    
+    .site h1 {
+        font-size: 18px;
+    }
+    .txt-btn {
+        display: none; 
+    }
+    
+    .reserver {
+        padding: 10px;
+        border-radius: 50%; 
+    }
+    
+    .reserver i {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .disposition {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .menu:hover {
+        width: 100%;
+    }
+
+    .liens {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .elements {
+        flex-direction: row;
+        gap: 8px;
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 8px;
+        border-left: none;
+    }
+
+    .elements span, .menu:hover .elements span {
+        opacity: 1;
+    }
+
+    .elements.active {
+        background-color: rgba(252, 163, 17, 0.15);
+        color: #fca311;
+        border-left: none;
+    }
+
+    .contenu {
+        padding: 30px 15px;
+    }
+
+    .galerie {
+        padding: 25px 20px;
+        border-radius: 24px;
+    }
+
+    .galerie h2 {
+        font-size: 24px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation d'Hôtel - Ouagadougou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="stylef.css">
+</head>
+<body>
+    <header class="site">
+        <div class="logo">
+            <img src="images.png" alt="logo" width="50px">
+            <div>
+                <h1>OUAGADOUGOU (Burkina-Faso)</h1>
+                <p class="sous-titre">KADIOGO &bull; Tourisme</p>
+            </div>
+        </div>
+    </header> 
+
+    <div class="disposition">
+        
+        <nav class="menu">
+            <div class="liens">
+                <a href="index.html" class="elements">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="patrimoine.html" class="elements">
+                    <i class="bi bi-bank2"></i>
+                    <span>Patrimoine</span>
+                </a>
+                <a href="formulaire.html" class="elements active">
+                    <i class="bi bi-calendar-check-fill"></i>
+                    <span>Réservation d'hôtel</span>
+                </a>
+                <a href="galerie.html" class="elements">
+                    <i class="bi bi-images"></i>
+                    <span>Galerie</span>
+                </a>
+            </div>
+        </nav>
+
+        <main class="contenu">
+            <div class="formulaire">
+                <h2>Réservez votre séjour à <span class="highlight">Ouagadougou</span></h2>
+                <div class="decor"></div>
+                <p class="intro">Remplissez ce formulaire pour planifier votre hébergement dans les meilleurs complexes hôteliers de la capitale.</p>
+                
+                <form action="#" method="POST" class="booking-form">
+                    
+                    <fieldset class="section">
+                        <legend><i class="bi bi-person-fill"></i> Informations Personnelles</legend>
+                        
+                        <div class="bloc">
+                            <label for="nom-complet">Nom et Prénom :</label>
+                            <input type="text" id="nom-complet" name="nom-complet" placeholder="Ex: Alassane Sawadogo" required>
+                        </div>
+
+                        <div class="lignes">
+                            <div class="bloc">
+                                <label for="email">Adresse E-mail :</label>
+                                <input type="email" id="email" name="email" placeholder="Ex: alassane@mail.com" required>
+                            </div>
+                            <div class="bloc">
+                                <label for="telephone">Téléphone :</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="Ex: +226 70 00 00 00" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="section">
+                        <legend><i class="bi bi-calendar3"></i> Détails du Séjour</legend>
+                        
+                        <div class="lignes">
+                            <div class="bloc">
+                                <label for="date-arrivee">Date d'arrivée :</label>
+                                <input type="date" id="date-arrivee" name="date-arrivee" required>
+                            </div>
+                            <div class="bloc">
+                                <label for="date-depart">Date de départ :</label>
+                                <input type="date" id="date-depart" name="date-depart" required>
+                            </div>
+                        </div>
+
+                        <div class="lignes">
+                            <div class="bloc">
+                                <label for="hotel-choix">Choisir un Hôtel :</label>
+                                <select id="hotel-choix" name="hotel-choix" required>
+                                    <option value="" disabled selected>-- Sélectionnez un hôtel --</option>
+                                    <option value="laico">Hôtel Laico Ouaga 2000</option>
+                                    <option value="silmande">Hôtel Silmandé</option>
+                                    <option value="independance">Hôtel de l'Indépendance</option>
+                                    <option value="azalai">Azalaï Hôtel</option>
+                                </select>
+                            </div>
+                            <div class="bloc">
+                                <label for="voyageurs">Nombre de voyageurs :</label>
+                                <input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="section">
+                        <legend><i class="bi bi-door-open-fill"></i> Type de Chambre</legend>
+                        <div class="radio">
+                            <label class="label">
+                                <input type="radio" name="type-chambre" value="standard" checked> <span>Standard Single</span>
+                            </label>
+                            <label class="label">
+                                <input type="radio" name="type-chambre" value="double"> <span>Double Executive</span>
+                            </label>
+                            <label class="label">
+                                <input type="radio" name="type-chambre" value="suite"> <span>Suite Prestige</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="section">
+                        <legend><i class="bi bi-plus-circle-fill"></i> Options Souhaitées</legend>
+                        <div class="cases">
+                            <label class="cases-label">
+                                <input type="checkbox" name="options" value="dej"> <span>Petit-déjeuner inclus</span>
+                            </label>
+                            <label class="cases-label">
+                                <input type="checkbox" name="options" value="navette"> <span>Navette Aéroport</span>
+                            </label>
+                            <label class="cases-label">
+                                <input type="checkbox" name="options" value="guide"> <span>Guide touristique privé</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="bloc column-textarea">
+                        <label for="Demandes">Demandes particulières / Notes :</label>
+                        <textarea id="Demandes" name="Demandes" rows="4" placeholder="Précisez ici vos besoins spécifiques (lit bébé, allergies...)"></textarea>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="soumettre">
+                            <i class="bi bi-check2-circle"></i> Confirmer ma réservation
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer class="pied">
+        <div class="pied-liens">
+            <a href="https://www.facebook.com/share/1RRprYm98Z/?mibextid=wwXIfr" target="_blank" class="footer-items">
+                <i class="bi bi-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="mailto:mohamedkaraga42@gmail.com" target="_blank" class="footer-items">
+                <i class="bi bi-envelope-at-fill"></i> <span>Gmail</span>
+            </a>
+            <a href="https://wa.me/22670183410" target="_blank" class="footer-items">
+                <i class="bi bi-whatsapp"></i> <span>WhatsApp</span>
+            </a>
+        </div>
+        <p class="cr">&copy; 2026 Direction du Tourisme et du Patrimoine - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
